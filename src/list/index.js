@@ -13,7 +13,7 @@ function List() {
   }, []);
 
   const getFetchRewardsApi = async () => {
-    await fetch('https://fetch-hiring.s3.amazonaws.com/hiring.json')
+    await fetch(gitHubUrl)
     .then(response => response.json())
     .then(data => sortData(data))
     .catch(error => console.log('Request failed', error))
